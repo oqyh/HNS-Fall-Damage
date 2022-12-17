@@ -1,46 +1,47 @@
-# [HNS] Anti Frag (1.0.0)
+# [HNS] Fall Damage (1.0.0)
 https://forums.alliedmods.net/showthread.php?t=340791
 
 ### Modify Knife Damage + Cooldown From Stabbing T's
 
-![alt text](https://github.com/oqyh/HNS-Anti-Frag/blob/main/img/Screenshot.PNG.jpg?raw=true)
+![alt text](https://github.com/oqyh/HNS-Fall-Damage/blob/main/img/screenshot1.png?raw=true)
+
+![alt text](https://github.com/oqyh/HNS-Fall-Damage/blob/main/img/screenshot2.png?raw=true)
 
 
 ## .:[ ConVars ]:.
  ```
-// Enable Anti-Frag Plugin || 1= Yes || 0= No
-hns_f_enable_plugin "1"
-
-// How Much Knife Damage To T's || [Default 59 = 50 HP] 
-hns_f_knife_damage "59.0"
-
-// (in sec) Cooldown Between Knife Stabs
-hns_f_knife_cooldown "5.0"
+// Enable Fall Damage Plugin || 1= Yes || 0= No
+hns_d_enable_plugin "1"
 
 
 
-// Enable Transparent After Damage || 1= Yes || 0= No
-hns_f_enable_transparent "0"
+// Enable God Mode For Ts || 2= On Spawn Only || 1= On Round Start Only || 0= No
+hns_d_enable_godmode "1"
 
-// How Much Transparent After Hit || 0= Invisible || 120= Transparent || 255=None
-hns_f_transparent "120"
+// if hns_d_enable_godmode 1 or 2 Give God Mode To CTs Also? || 1= Yes || 0= No
+hns_d_godmode_ct "1"
 
-// Body Blue Code Color  Pick Here https://www.rapidtables.com/web/color/RGB_Color.html
-hns_f_color_b "0"
-
-// Body Green Code Color  Pick Here https://www.rapidtables.com/web/color/RGB_Color.html
-hns_f_color_g "0"
-
-// Body Red Code Color Pick Here https://www.rapidtables.com/web/color/RGB_Color.html
-hns_f_color_r "255"
+// For How Many (in sec) if hns_d_enable_godmode 1 or 2 God Mode Should Be On
+hns_d_godmode_time "10.0"
 
 
 
-// Enable Notification Message Chat After Damage For Attacker (CT) || 1= Yes || 0= No
-hns_f_enable_notify_ct "1"
+// Enable Regenerate Fall Damage Only  || 1= Yes || 0= No
+hns_d_enable_regen "1"
 
-// Enable Notification Message Chat After Damage For Victim (T) || 1= Yes || 0= No
-hns_f_enable_notify_t "0"
+// How Much HP To Give if hns_d_enable_regen 1
+hns_d_regen_hp "2"
+
+// How Many (in sec) hns_d_regen_hp Give Hp
+hns_d_regen_time "5.0"
+
+
+
+// Enable Notification Message To All Who Got Fall Damage  || 1= Yes || 0= No
+hns_d_enable_notify "1"
+
+// Enable Notification God Mode  || 1= Yes || 0= No
+hns_d_enable_notify_god "1"
 ```
 
 
