@@ -1,0 +1,30 @@
+"Phrases"
+{
+	"Tag"
+	{
+		"en"			" {Green}Gold KingZ {grey}| "
+	}
+	
+	"GodModeOn"
+	{
+		"#format"		"{1:.1f}"
+		"en"			" You have {darkred}{1} Secs {grey}God Mode"
+	}
+	
+	"GodModeOff"
+	{
+		"en"			" You no longer have {darkred}God Mode"
+	}
+	
+	"FallDamage"
+	{
+		"#format"		"{1:N}, {2:d}, {3:d}"
+		"en"			" {orchid}{1} {grey}just took {darkred}{2} {grey}fall damage {lime}[HP: {3}]"
+	}
+	
+	"FallDamageDeath"
+	{
+		"#format"		"{1:N}, {2:d}"
+		"en"			" {orchid}{1} {grey}just took {darkred}{2} {grey}fall damage {lime}[HP: 0]"
+	}
+}
