@@ -1,7 +1,7 @@
 # [HNS] Fall Damage (1.0.0)
 https://forums.alliedmods.net/showthread.php?t=340791
 
-### Modify Knife Damage + Cooldown From Stabbing T's
+### Fall Damage Print + Health Regeneration Fall Damage + God Mode Timer
 
 ![alt text](https://github.com/oqyh/HNS-Fall-Damage/blob/main/img/screenshot1.png?raw=true)
 
