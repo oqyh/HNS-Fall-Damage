@@ -18,13 +18,13 @@
 	
 	"FallDamage"
 	{
-		"#format"		"{1:N}, {2:d}, {3:d}"
+		"#format"		"{1:N},{2:d},{3:d}"
 		"en"			" {orchid}{1} {grey}just took {darkred}{2} {grey}fall damage {lime}[HP: {3}]"
 	}
 	
 	"FallDamageDeath"
 	{
-		"#format"		"{1:N}, {2:d}"
+		"#format"		"{1:N},{2:d}"
 		"en"			" {orchid}{1} {grey}just took {darkred}{2} {grey}fall damage {lime}[HP: 0]"
 	}
 }
