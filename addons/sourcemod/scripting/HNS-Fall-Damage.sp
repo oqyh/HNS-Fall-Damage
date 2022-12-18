@@ -61,8 +61,10 @@ public void OnPluginStart()
 	h_enable_notify_god = CreateConVar("hns_d_enable_notify_god", "0", "Enable Notification God Mode  || 1= Yes || 0= No", _, true, 0.0, true, 1.0);
 
 	HookEvent("round_start", Event_RoundStart);
+	HookEvent("round_end", Event_RoundEnd);
 	HookEvent("player_spawn", Event_PlayerSpawn);
-
+	HookEvent("player_death", Event_PlayerDeath);
+	
 	HookConVarChange(h_enable_plugin, OnSettingsChanged);
 	HookConVarChange(h_enable_godmode, OnSettingsChanged);
 	HookConVarChange(h_godmode_team, OnSettingsChanged);
@@ -177,6 +179,38 @@ public Action Event_RoundStart(Handle event, const char[] name, bool dontBroadca
 						CPrintToChat(i, " %t %t", "Tag", "GodModeOn", h_bgodmode_time);
 					}
 				}
+			}
+		}
+	}
+	return Plugin_Continue;
+}
+
+public Action Event_PlayerDeath(Handle event, const char[] name, bool dontBroadcast)
+{
+	for (int i = 1; i <= MaxClients; i++)
+	{
+		if(IsValidClient(i))
+		{
+			if(g_bTimer[i] != INVALID_HANDLE)
+			{
+				KillTimer(g_bTimer[i]);
+				g_bTimer[i] = INVALID_HANDLE;
+			}
+		}
+	}
+	return Plugin_Continue;
+}
+
+public Action Event_RoundEnd(Handle event, const char[] name, bool dontBroadcast)
+{
+	for (int i = 1; i <= MaxClients; i++)
+	{
+		if(IsValidClient(i))
+		{
+			if(g_bTimer[i] != INVALID_HANDLE)
+			{
+				KillTimer(g_bTimer[i]);
+				g_bTimer[i] = INVALID_HANDLE;
 			}
 		}
 	}
