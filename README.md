@@ -1,5 +1,5 @@
 # [HNS] Fall Damage (1.0.0)
-https://forums.alliedmods.net/showthread.php?t=340791
+https://forums.alliedmods.net/showthread.php?t=340920
 
 ### Fall Damage Print + Health Regeneration Fall Damage + God Mode Timer
 
