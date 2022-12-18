@@ -218,7 +218,7 @@ public void Event_PlayerSpawn(Event event, const char[] name, bool dontBroadcast
 
 public Action RemoveGodMode(Handle timer6, any client)
 {
-	if(IsClientInGame(client) && IsClientSpawnProtected(client) && GetEntProp(client, Prop_Send, "m_lifeState") == 0) 
+	if(IsClientInGame(client) && GetEnts(client) && GetEntProp(client, Prop_Send, "m_lifeState") == 0) 
 	{
 		SetEntProp(client, Prop_Data, "m_takedamage", 2, 1);
 		if(h_benable_notify_god)
@@ -247,14 +247,16 @@ public Action OneHitDamage(int victim, int &attacker, int &inflictor, float &dam
     }
 	
 	if(g_bTimer[victim] != null)
-	return Plugin_Handled;
+    {
+        delete g_bTimer[victim];
+    }
 	
 	AfterDamageHealth[victim] = GetClientHealth(victim);
 	BeforeDamageHealth[victim] = GetClientHealth(victim);
 	
 	if(IsValidClient(victim))
 	{
-		if( (damagetype & DMG_FALL || damagetype & DMG_VEHICLE) && RoundToFloor(damage) > 0.0)
+		if( (damagetype & DMG_FALL || damagetype & DMG_VEHICLE) && RoundToFloor(damage) > 0.0 && GetEntProp(victim, Prop_Data, "m_takedamage", 2))
 		{
 			GetHealthAfterFallDamage[victim] = AfterDamageHealth[victim] - RoundToFloor(damage);
 			GetHealthBackFallDamage[victim] = GetHealthAfterFallDamage[victim] + RoundToFloor(damage);
@@ -284,6 +286,11 @@ public Action Regen_Timer(Handle timer, any victim)
 	int currenthealth = GetClientHealth(victim);
 	int rollbackhealth = (currenthealth - GetHealthBackFallDamage[victim]);
 	
+	if(g_bTimer[victim] != timer)
+    {
+        return Plugin_Stop;
+    }
+	
 	if(IsValidClient(victim))
 	{
 		if(currenthealth < GetHealthBackFallDamage[victim])
@@ -303,7 +310,7 @@ public Action Regen_Timer(Handle timer, any victim)
 	return Plugin_Continue;
 }
 
-public bool IsClientSpawnProtected(int client)
+public bool GetEnts(int client)
 {
 	return (GetEntProp(client, Prop_Data, "m_takedamage") == 0);
 }
