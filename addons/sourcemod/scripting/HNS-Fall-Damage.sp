@@ -261,7 +261,7 @@ public Action OneHitDamage(int victim, int &attacker, int &inflictor, float &dam
 			GetHealthAfterFallDamage[victim] = AfterDamageHealth[victim] - RoundToFloor(damage);
 			GetHealthBackFallDamage[victim] = GetHealthAfterFallDamage[victim] + RoundToFloor(damage);
 			
-			if(GetHealthAfterFallDamage[victim] > 1)
+			if(GetHealthAfterFallDamage[victim] > 0)
 			{
 				if(g_bTimer[victim] == INVALID_HANDLE && h_benable_regen)
 				{
