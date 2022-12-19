@@ -54,6 +54,7 @@ hns_d_enable_notify_god "1"
 -Fix Bug
 -Fix Invalid timer handle 0
 -Fix Client 1 is not in game
+-Fix Invalid token ' ' in #format property on line 21 + 27
 -Fix Regenerate keep on on start round or respawn
 -Added hns_d_enable_notify Print Hp Or Without  2= Without HP || 1= With Hp || 0= No
 -Added hns_d_regen_per Percent Give HP Regenerate
