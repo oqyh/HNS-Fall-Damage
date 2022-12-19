@@ -16,15 +16,25 @@
 		"en"			" You no longer have {darkred}God Mode"
 	}
 	
-	"FallDamage"
+	"FallDamagewithhp"
 	{
 		"#format"		"{1:N},{2:d},{3:d}"
 		"en"			" {orchid}{1} {grey}just took {darkred}{2} {grey}fall damage {lime}[HP: {3}]"
 	}
+	"FallDamagewithouthp"
+	{
+		"#format"		"{1:N},{2:d}"
+		"en"			" {orchid}{1} {grey}just took {darkred}{2} {grey}fall damage"
+	}
 	
-	"FallDamageDeath"
+	"FallDamageDeathwithhp"
 	{
 		"#format"		"{1:N},{2:d}"
 		"en"			" {orchid}{1} {grey}just took {darkred}{2} {grey}fall damage {lime}[HP: 0]"
+	}
+	"FallDamageDeathwithouthp"
+	{
+		"#format"		"{1:N},{2:d}"
+		"en"			" {orchid}{1} {grey}just took {darkred}{2} {grey}fall damage"
 	}
 }
