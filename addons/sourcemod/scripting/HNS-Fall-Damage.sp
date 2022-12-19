@@ -342,7 +342,7 @@ public Action Regen_Timer(Handle timer, any victim)
         return Plugin_Stop;
     }
 	
-	if(IsValidClient(victim) || RoundEnd == false)
+	if(IsValidClient(victim) && RoundEnd == false)
 	{
 		int currenthealth = GetClientHealth(victim);
 		int rollbackhealth = (currenthealth - GetHealthBackFallDamage[victim]);
