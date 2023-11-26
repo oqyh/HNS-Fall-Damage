@@ -1,4 +1,4 @@
-# [HNS] Fall Damage (1.0.2)
+# [CSGO-CSS] HNS Fall Damage (1.0.2)
 https://forums.alliedmods.net/showthread.php?t=340920
 
 ### Fall Damage Print + Health Regeneration Fall Damage + God Mode Timer
